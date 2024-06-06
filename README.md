@@ -1,31 +1,68 @@
-# React Vite Starter Template with Tailwind CSS and React Router DOM
+# React Tailwind Forms
 
-This repository serves as a starter template for React projects with Vite as the build tool, Tailwind CSS for styling, and React Router DOM for routing. It aims to provide a quick and efficient setup for starting React projects with modern tooling.
+A collection of reusable form components built with React and styled with Tailwind CSS. This project aims to provide a variety of form components for future projects, including:
 
-## Features
+- Input Field
+- File Input
+- Search Input
+- Number Input
+- Phone Input
+- Select
+- Textarea
+- Timepicker
+- Checkbox
+- Radio
+- Toggle
+- Range
+- Floating Label
 
-- **Vite**: A fast, opinionated web dev build tool that serves your code via native ES Module imports during development.
-- **React**: A JavaScript library for building user interfaces.
-- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
-- **React Router DOM**: Declarative routing for React.
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Components](#components)
+  - [Input Field](#input-field)
+  - [File Input](#file-input)
+  - [Search Input](#search-input)
+  - [Number Input](#number-input)
+  - [Phone Input](#phone-input)
+  - [Select](#select)
+  - [Textarea](#textarea)
+  - [Timepicker](#timepicker)
+  - [Checkbox](#checkbox)
+  - [Radio](#radio)
+  - [Toggle](#toggle)
+  - [Range](#range)
+  - [Floating Label](#floating-label)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
-To use this starter template, follow these steps:
+To get started with this project, follow these steps:
 
-1. **Clone the repository**:
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- npm or yarn
+- Git
+
+### Installation
+
+1. Clone the repository:
 
     ```bash
-    git clone https://github.com/igbokwe-chibueze/vite-react-tailwind-starter-template
+    git clone https://github.com/your-username/react-tailwind-forms.git
     ```
 
-2. **Navigate into the project directory**:
+2. Navigate to the project directory:
 
     ```bash
-    vite-react-tailwind-starter-template
+    cd react-tailwind-forms
     ```
 
-3. **Install dependencies** using npm or yarn:
+3. Install the dependencies:
 
     ```bash
     npm install
@@ -34,36 +71,22 @@ To use this starter template, follow these steps:
     or
 
     ```bash
-    yarn
+    yarn install
     ```
 
-4. **Start the development server**:
+4. Start the development server:
 
     ```bash
-    npm run dev
+    npm start
     ```
 
     or
 
     ```bash
-    yarn dev
+    yarn start
     ```
 
-5. **Open your browser** and navigate to [http://localhost:3000](http://localhost:3000) to view your application.
-
-## Project Structure
-
-- `src/`: Contains the source code of your React application.
-- `src/App.js`: Main component where your application starts.
-- `src/components/`: Directory for storing reusable components.
-- `src/pages/`: Directory for defining your application's pages.
-- `src/styles/`: Directory for custom stylesheets or Tailwind CSS configurations.
-- `src/wrappers/`: Directory for placing higher-order component (HOC) files.
-- `src/hooks/`: Directory for custom hooks.
-- `src/sections/`: Directory for different sections of your application.
-- `src/constants/`: Directory for storing data constants.
-- `vite.config.js`: Vite configuration file for customizing Vite setup.
-- `trash/`: Directory for storing rough or temporary files (this directory will be ignored on push).
+This will start the development server at `http://localhost:3000`.
 
 ## Contributing
 

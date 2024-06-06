@@ -1,10 +1,16 @@
+//import FloatingLabelsForm from "./components/FloatingLabelsForm";
+//import GeneralInputs from "./components/GeneralInputs";
+import { FieldInputs, NumberInputs, SelectInputs } from "./pages";
+
 export default function App() {
   return (
     <>
-      <div className="h-screen bg-teal-500">
-        <h1 className="text-3xl text-center font-bold underline">
-          Hello world!
-        </h1>
+      <div>
+        <FieldInputs/>
+        <SelectInputs/>
+        <NumberInputs/>
+        {/* <GeneralInputs/> */}
+        {/* <FloatingLabelsForm/> */}
       </div>
     </>
   )

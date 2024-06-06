@@ -1,3 +1,99 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    
+    .header-one {
+        @apply text-base font-medium text-left text-gray-900 dark:text-white mb-2
+    }
+
+    .header-two {
+        @apply text-base font-normal text-left text-gray-900 dark:text-white mb-2
+    }
+
+    .label-basic {
+        @apply block text-base font-medium text-left text-gray-900 dark:text-white
+    }
+
+    .label-floating {
+        @apply absolute left-2 -top-2 text-xs font-medium text-left text-gray-900 dark:text-white 
+        bg-blue-50 transition-all duration-500 ease-in-out
+        peer-placeholder-shown:left-2 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base 
+        peer-placeholder-shown:text-gray-400 peer-placeholder-shown:bg-gray-50
+        peer-focus:left-2 peer-focus:-top-2 peer-focus:text-gray-600 peer-focus:text-xs peer-focus:bg-gray-50
+    }
+
+    .label-floating-filled {
+        @apply absolute left-2 -top-0 text-xs font-medium text-left text-gray-900 dark:text-white 
+        transition-all duration-500 ease-in-out
+        peer-placeholder-shown:left-2 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base 
+        peer-placeholder-shown:text-gray-400
+        peer-focus:left-2 peer-focus:-top-0 peer-focus:text-gray-600 peer-focus:text-xs
+    }
+
+    
+
+    .input-basic {
+        @apply block w-full p-2.5 bg-gray-50 dark:bg-gray-700 text-sm text-gray-900 dark:text-white
+        rounded-lg border border-gray-300 dark:border-gray-600
+        focus:ring-blue-500 dark:focus:ring-blue-500 focus:outline-none focus:border-blue-500 dark:focus:border-blue-600   
+        dark:placeholder-gray-400 
+    }
+
+    .input-placeholder-invalid {
+        @apply placeholder-shown:invalid:border-gray-300 dark:placeholder-shown:invalid:border-gray-600
+        placeholder-shown:invalid:bg-gray-50 dark:placeholder-shown:invalid:bg-gray-700
+        placeholder-shown:invalid:text-gray-900 dark:placeholder-shown:invalid:text-white
+        placeholder-shown:invalid:focus:border-blue-500 dark:placeholder-shown:invalid:focus:border-blue-600
+    }
+
+    .input-invalid {
+        @apply invalid:border-red-500 invalid:text-red-500 dark:invalid:text-red-900 
+        invalid:bg-red-50 dark:invalid:bg-red-300;
+    }
+
+
+
+    .input-filled {
+        /* consider using rounded-lg as it looks better instead of rounded-t-lg */
+        @apply block w-full p-2.5 bg-gray-200 dark:bg-gray-900 text-sm text-gray-900 dark:text-white
+        rounded-t-lg border-0 border-b-2 border-gray-300 dark:border-gray-600
+        focus:ring-blue-500 dark:focus:ring-blue-500 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500   
+        dark:placeholder-gray-400
+    }
+
+    .input-standard {
+        /* consider using rounded-lg as it looks better on the bottom border. */
+        @apply block w-full p-2.5 text-gray-900 dark:text-white
+        border-b-2 border-gray-300 dark:border-gray-600
+        focus:ring-blue-500 dark:focus:ring-blue-500 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500   
+        dark:placeholder-gray-400
+    }
+
+    .input-basic2 {
+        /* I used this for the dropdown form type */
+        @apply block w-full p-2.5 bg-gray-50 dark:bg-gray-700 text-sm text-gray-900 dark:text-white
+        rounded-e-lg border border-gray-300 dark:border-gray-600
+        focus:ring-blue-500 dark:focus:ring-blue-500 focus:outline-none focus:border-blue-500 dark:focus:border-blue-600   
+        dark:placeholder-gray-400 
+    }
+
+    .instruction-container {
+        @apply flex justify-start items-center space-x-2 text-gray-900 dark:text-white
+    }
+
+    .instruction-text {
+        @apply text-sm font-light text-left
+    }
+
+
+
+    .dropdown-btn {
+        @apply flex-shrink-0 z-10 inline-flex items-center py-2.5 px-2 md:px-4 text-sm font-medium text-center text-gray-900 
+        bg-gray-100 border border-e-0 border-gray-300 dark:border-gray-700 dark:text-white rounded-s-lg
+        hover:bg-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 
+        dark:hover:bg-gray-700 dark:focus:ring-gray-800
+    }
+
+}
