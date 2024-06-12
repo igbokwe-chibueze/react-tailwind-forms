@@ -45,7 +45,7 @@ const SelectInputs = () => {
                 <form action="" method="post" className="w-full space-y-2">
 
                     <label className="label-basic">
-                        Apply the <span className="text-blue-600">multiple</span> 
+                        Apply the <span className="highlighted-text">multiple </span> 
                         attribute to the select component to allow users to select one or more options.
                     </label>
 
@@ -70,7 +70,7 @@ const SelectInputs = () => {
                 <form action="" method="post" className="w-full space-y-2">
 
                     <label className="label-basic">
-                        Use the <span className="text-blue-600">size </span> 
+                        Use the <span className="highlighted-text">size </span> 
                         attribute for the select component to specify the number of visible options in the list.
                     </label>
 
@@ -140,6 +140,7 @@ const SelectInputs = () => {
                 </form>
 
             </div>
+
 
             {/* Select Input And Dropdown */}
             <div className="max-w-md mx-auto border-2 border-gray-200 px-4 pt-14 pb-6 space-y-8">

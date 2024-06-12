@@ -9,5 +9,5 @@ export {
     ThemeSwitcher,
     FloatingLabelsForm,
     GeneralInputs,
-    Dropdown
+    Dropdown,
 }

@@ -1,9 +1,17 @@
+import { useState } from "react";
 import Dropdown from "../components/Dropdown"
-import { ClickIcon, MailIcon, MicrophoneIcon, SearchIcon, UserIcon, VoiceIcon } from "../components/Icons"
+import { ClickIcon, ClockIcon, DateIcon, EyeIcon, EyeSlashIcon, MailIcon, MicrophoneIcon, SearchIcon, UserIcon, VoiceIcon } from "../components/Icons"
 import { categories } from "../constants/Data"
 
 
 const FieldInputs = () => {
+
+    const [showPassword, setShowPassword] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
   return (
    <section className="min-h-screen">
         <div className= "max-w-screen-xl mx-auto px-2 lg:px-12 py-8 lg:py-16 space-y-8">
@@ -165,11 +173,9 @@ const FieldInputs = () => {
                     </label>
                     <input type="text" name="text" id="success-input" 
                         placeholder=" Success "
-                        className=" peer input-basic
-                        valid:border-green-500 valid:text-green-500 dark:valid:text-green-900 
-                        valid:bg-green-50 dark:valid:bg-green-300 "
+                        className=" peer input-basic success-validation "
                     />
-                    <p className=" text-sm font-medium text-left invisible peer-valid:visible text-green-600 dark:text-green-500 ">
+                    <p className=" success-notification-text ">
                         Success message.
                     </p>
 
@@ -188,22 +194,79 @@ const FieldInputs = () => {
                     <div className=" instruction-container ">
                         <ClickIcon className={" w-16 h-16 sm:w-5 sm:h-5"}/>
                         <p className=" instruction-text ">
-                            Try making the email address valid by addidng &quot;@&quot; after name to see the styles change.
+                            Try making the email address valid by addidng 
+                            <span className="highlighted-text">&quot;@&quot;</span> after name to see the styles change.
                         </p>
                     </div>
 
                     <input type="email" name="email" id="error-input" 
                         placeholder=" name@creativa.com "
-                        className="peer input-basic
-                        invalid:border-red-500 invalid:text-red-500 dark:invalid:text-red-900 
-                        invalid:bg-red-50 dark:invalid:bg-red-300"
+                        className="peer input-basic error-validation "
                         // This is just used here to create a default value for testing.
                         defaultValue="namecreativa.com"
                     />
-
-                    <p className=" text-sm font-medium text-left invisible peer-invalid:visible text-red-600 dark:text-red-500"
-                    >
+                    <p className=" error-notification-text ">
                         Please provide a valid email address.
+                    </p>
+                </form>
+            </div>
+
+
+
+            {/* Password and URL Fileds */}
+            <div className="max-w-md mx-auto border-2 border-gray-200 px-4 pt-14 pb-6 space-y-8">
+                {/* Header */}
+                <div className=" space-y-2 ">
+                    <h1 className=" header-one ">Password and URL Fileds</h1>
+                    <h2 className=" header-two ">
+                        Refer to the following example to learn how to apply validation styles for success and error messages.
+                    </h2>
+                </div>
+
+                {/* password-input */}
+                <form action="" method="post" className="w-full space-y-2">
+                    <label htmlFor="password-input" 
+                        className=" label-basic 
+                        after:content-['*'] after:ml-0.5 after:text-red-500"
+                    >
+                        Your password
+                    </label>
+
+                    <input type="password" name="password" id="password-input" 
+                        placeholder="  "
+                        className="peer input-basic"
+                    />
+                </form>
+
+
+                {/* url-input */}
+                <form action="" method="post" className="w-full space-y-2">
+                    <label htmlFor="url-input" 
+                        className=" label-basic "
+                    >
+                        Website URL
+                    </label>
+
+                    <div className=" instruction-container ">
+                        <ClickIcon className={" w-16 h-16 sm:w-5 sm:h-5"}/>
+                        <p className=" instruction-text ">
+                            Try making the web address valid by addidng 
+                            <span className="highlighted-text">&quot;https://&quot;</span> to see the styles change.
+                        </p>
+                    </div>
+
+                    <input type="url" name="url" id="url-input" 
+                        placeholder="creativa.com "
+                        className="peer input-basic error-validation "
+
+                        // This is just used here to create a default value for testing.
+                        defaultValue="www.creativa.com"
+                    />
+
+                    <p 
+                        className=" error-notification-text "
+                    >
+                        Please provide a valid url .
                     </p>
                 </form>
             </div>
@@ -232,7 +295,7 @@ const FieldInputs = () => {
 
                     <div className=" relative ">
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                            <MailIcon className="w-4 h-4 text-gray-500 dark:text-gray-400"/>
+                            <MailIcon className=" w-4 h-4 icon "/>
                         </div>
                         <input type="email" name="email" id="input-group-1" 
                             placeholder=" name@creativa.com "
@@ -254,18 +317,17 @@ const FieldInputs = () => {
 
                     <div className=" relative ">
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                            <VoiceIcon className="w-4 h-4 text-gray-500 dark:text-gray-400"/>
+                            <VoiceIcon className="w-4 h-4 icon "/>
                         </div>
                         <input type="text" name="text" id="voice-search" 
                             placeholder=" search..... "
                             className="input-basic ps-10 input-placeholder-invalid input-invalid"
                         />
                         <div className=" absolute inset-y-0 end-0 flex items-center pe-3.5 ">
-                            <MicrophoneIcon className="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"/>
+                            <MicrophoneIcon className=" w-4 h-4 icon-hover "/>
                         </div>
                     </div>
                 </form>
-
 
 
                 {/* input-group-3 */}
@@ -279,10 +341,9 @@ const FieldInputs = () => {
 
                     <div className=" flex ">
                         <div 
-                            className=" inline-flex items-center px-3 bg-gray-200 dark:bg-gray-600 
-                            rounded-e-0 rounded-s-md border border-e-0 border-gray-300 dark:border-gray-600"
+                            className=" icon-bg "
                         >
-                            <UserIcon className="w-4 h-4 text-gray-500 dark:text-gray-400"/>
+                            <UserIcon className="w-4 h-4 icon"/>
                         </div>
                         <input type="name" name="name" id="input-group-3" 
                             placeholder="okoro amina"
@@ -290,6 +351,81 @@ const FieldInputs = () => {
                         />
                     </div>
                 </form>
+
+
+                {/* password-input-group */}
+                <form action="" method="post" className="w-full space-y-2">
+                    <label htmlFor="password-input-group" 
+                        className=" label-basic 
+                        after:content-['*'] after:ml-0.5 after:text-red-500"
+                    >
+                        Password
+                    </label>
+
+                    <div className=" relative ">
+                        <input 
+                            type={showPassword ? "text" : "password"}
+                            name="password" id="password-input-group" 
+                            placeholder="  "
+                            className="peer input-basic"
+                        />
+                        <button
+                            type="button"
+                            onClick={togglePasswordVisibility}
+                            className="absolute inset-y-0 end-0 flex items-center pe-3.5 "
+                        >
+                            {showPassword ? <EyeSlashIcon className={"w-6 h-6 icon-hover"}/> : <EyeIcon className={"w-6 h-6 icon-hover"}/>}
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                {/* time/date-input-group */}
+                <form action="" method="post" className="max-w-[18rem] mx-auto grid grid-cols-2 gap-4">
+                    <div>
+                        <label htmlFor="time-input-group" 
+                            className=" label-basic "
+                        >
+                            Select time:
+                        </label>
+
+                        <div className=" relative ">
+                            <input 
+                                type="time"
+                                name="time" id="time-input-group" 
+                                min="09:00" max="18:00" 
+                                required 
+                                className="peer input-basic "
+                            />
+                            <div className=" absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none ">
+                                <ClockIcon className=" w-4 h-4 icon "/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label htmlFor="date-input-group" 
+                            className=" label-basic "
+                        >
+                            Pick a date:
+                        </label>
+
+                        <div className=" relative ">
+                            <input 
+                                type="date"
+                                name="date" id="date-input-group" 
+                                required 
+                                className="peer input-basic "
+                            />
+                            <div className=" absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none ">
+                                <DateIcon className=" w-4 h-4 icon "/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
             </div>
 
 
@@ -315,17 +451,14 @@ const FieldInputs = () => {
 
                     <div className=" relative ">
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                            <SearchIcon className="w-4 h-4 text-gray-500 dark:text-gray-400"/>
+                            <SearchIcon className="w-4 h-4 icon "/>
                         </div>
                         <input type="search" name="search" id="search" 
                             placeholder="name@creativa.com"
-                            //required
                             className=" input-basic p-4 ps-10 "
                         />
                         <button type="submit" 
-                            className=" absolute end-2.5 bottom-2.5 px-4 py-2 text-sm font-medium text-white rounded-lg
-                            bg-blue-700 dark:bg-blue-600 hover:bg-blue-800 dark:hover:bg-blue-700 
-                            focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 "
+                            className=" btn "
                         >
                             Search
                         </button>
@@ -349,10 +482,7 @@ const FieldInputs = () => {
                             className=" input-basic p-3.5 "
                         />
                         <button type="submit" 
-                            className=" p-3.5 h-full 
-                            text-sm font-medium text-white bg-blue-700 rounded
-                            border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
-                            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            className=" btn2 "
                         >
                             <SearchIcon className="w-6 h-4 text-white "/>
                         </button>
@@ -377,10 +507,7 @@ const FieldInputs = () => {
                                 className=" input-basic2 p-3.5 "
                             />
                             <button type="submit" 
-                                className=" absolute top-0 end-0 p-2.5 h-full 
-                                text-sm font-medium text-white bg-blue-700 rounded-e-lg
-                                border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
-                                dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                className=" btn3 "
                             >
                                 <SearchIcon className="w-6 h-4 text-white "/>
                             </button>

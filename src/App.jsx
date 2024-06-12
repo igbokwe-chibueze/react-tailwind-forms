@@ -1,6 +1,6 @@
 //import FloatingLabelsForm from "./components/FloatingLabelsForm";
 //import GeneralInputs from "./components/GeneralInputs";
-import { FieldInputs, NumberInputs, SelectInputs } from "./pages";
+import { FieldInputs, NumberInputs, SelectInputs, TextArea } from "./pages";
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
         <FieldInputs/>
         <SelectInputs/>
         <NumberInputs/>
-        {/* <GeneralInputs/> */}
+        <TextArea/>
         {/* <FloatingLabelsForm/> */}
       </div>
     </>

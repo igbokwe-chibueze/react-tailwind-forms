@@ -8,11 +8,11 @@ export const categories = [
 
 export const countries = [
     { value: "default", label: "Choose a location", disabled: true },
-    { value: "NG", label: "Nigeria" },
-    { value: "BR", label: "Brazil" },
-    { value: "US", label: "United States" },
-    { value: "FR", label: "France" },
-    { value: "CN", label: "China" },
+    { value: "NG", label: "Nigeria", code: "+234" },
+    { value: "BR", label: "Brazil", code: "+55" },
+    { value: "US", label: "United States", code: "+1" },
+    { value: "FR", label: "France", code: "+33" },
+    { value: "CN", label: "China", code: "+86" },
 ];
 
 export const years = [
@@ -21,3 +21,12 @@ export const years = [
     { value: 2019 }, { value: 2020 }, { value: 2021 },
     { value: 2022 }, { value: 2023 }, { value: 2024 },
 ];
+
+export const numbers = [
+    "+234 803 123 4567",
+    "+234 802 234 5678",
+    "+234 809 345 6789",
+    "+234 818 456 7890",
+    "+234 807 567 8901"
+  ];
+  
