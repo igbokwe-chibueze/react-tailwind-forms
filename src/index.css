@@ -49,6 +49,11 @@
         dark:placeholder-gray-400 
     }
 
+    .input-basic-textarea {
+        @apply block w-full p-2.5 text-sm text-gray-900 dark:text-white focus:outline-none 
+        dark:placeholder-gray-400 
+    }
+
     .input-placeholder-invalid {
         @apply placeholder-shown:invalid:border-gray-300 dark:placeholder-shown:invalid:border-gray-600
         placeholder-shown:invalid:bg-gray-50 dark:placeholder-shown:invalid:bg-gray-700
@@ -122,7 +127,7 @@
     }
 
     .helper-text {
-        @apply text-sm font-light text-left text-gray-900 dark:text-white
+        @apply text-sm font-light text-left text-gray-500 dark:text-white
     }
 
     .highlighted-text {
@@ -135,6 +140,16 @@
 
     .icon-hover {
         @apply text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white
+    }
+
+    .icon-hover2 {
+        @apply text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white
+        p-2 rounded cursor-pointer sm:ms-auto hover:bg-gray-100 dark:hover:bg-gray-600
+    }
+
+    .icon-hover3 {
+        @apply text-blue-600 dark:text-blue-500 hover:text-blue-900
+        p-2 rounded-full cursor-pointer sm:ms-auto hover:bg-blue-200 dark:hover:bg-blue-600
     }
 
     .icon-bg {
