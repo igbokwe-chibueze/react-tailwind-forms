@@ -208,7 +208,7 @@ const NumberInputs = () => {
                         </select>
 
                         <input type="phone" name="phone" id="number-verification" 
-                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
                             placeholder="0703-436-6839"
                             required
                             className=" input-basic2 " 
