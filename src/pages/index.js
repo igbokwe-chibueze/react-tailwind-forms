@@ -1,3 +1,4 @@
+import Checkbox from "./Checkbox";
 import FieldInputs from "./FieldInputs";
 import Forms from "./Forms";
 import NumberInputs from "./NumberInputs";
@@ -10,5 +11,6 @@ export {
     SelectInputs,
     NumberInputs,
     TextArea,
-    Forms
+    Forms,
+    Checkbox
 }

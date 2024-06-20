@@ -1,6 +1,6 @@
 //import FloatingLabelsForm from "./components/FloatingLabelsForm";
 //import GeneralInputs from "./components/GeneralInputs";
-import { FieldInputs, Forms, NumberInputs, SelectInputs, TextArea } from "./pages";
+import { Checkbox, FieldInputs, Forms, NumberInputs, SelectInputs, TextArea } from "./pages";
 
 export default function App() {
   return (
@@ -10,6 +10,7 @@ export default function App() {
         <SelectInputs/>
         <NumberInputs/>
         <TextArea/>
+        <Checkbox/>
         <Forms/>
         {/* <FloatingLabelsForm/> */}
       </div>

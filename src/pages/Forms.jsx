@@ -12,8 +12,10 @@ const Forms = () => {
 
   return (
     <section className="min-h-screen">
-        <div className= "max-w-screen-lg mx-auto px-2 lg:px-12 py-8 lg:py-16 border border-gray-200">
-            <form action="" >
+        <div className= "max-w-screen-xl mx-auto px-2 lg:px-12 py-8 lg:py-16 ">
+
+            <form action="" className=" max-w-lg mx-auto border-2 border-gray-200 px-4 pt-14 pb-6 space-y-6 ">
+
                 <div className=" grid md:grid-cols-2 gap-6">
 
                     {/* First Name */}
@@ -115,7 +117,7 @@ const Forms = () => {
                 </div>
 
                 {/* Email */}
-                <div className="w-full space-y-2 mb-6">
+                <div className="w-full space-y-2 ">
 
                     <label htmlFor="email" 
                         className=" label-basic 
@@ -137,7 +139,7 @@ const Forms = () => {
                 </div>
                 
                 {/* Password */}
-                <div className="w-full space-y-2 mb-6">
+                <div className="w-full space-y-2 ">
                     <label htmlFor="password" 
                         className=" label-basic 
                         after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -164,11 +166,26 @@ const Forms = () => {
                     </div>
                 </div>
 
+                {/* Checkbox */}
+                <div className="flex items-center ">
+                    <input id="form-checkbox" type="checkbox" value="" 
+                        className=" input-checkbox "
+                    />
+                    <label htmlFor="form-checkbox" 
+                        className="label-checkbox"
+                    >
+                        I agree with the 
+                        <a href="https://github.com/igbokwe-chibueze/react-tailwind-forms" 
+                            className=" mx-2 highlighted-text hover:underline"
+                        >
+                            terms and conditions.
+                        </a>
+                    </label>
+                </div>
+
                 <button type="submit" className=" btn2 px-5 py-2.5 ">
                     Submit
                 </button>
-
-                
             </form>
         </div>
     </section>

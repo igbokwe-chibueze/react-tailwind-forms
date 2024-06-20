@@ -1,3 +1,5 @@
+import { AngularIcon, ReactIcon, VueJsIcon } from "../components/Icons";
+
 // Data.js
 export const categories = [
     { href: '#', text: 'Shopping' },
@@ -28,5 +30,39 @@ export const numbers = [
     "+234 809 345 6789",
     "+234 818 456 7890",
     "+234 807 567 8901"
-  ];
+];
+
+export const users = [
+    {name:"Chinonso Okafor", checked: true},
+    {name:"Liam Smith"},
+    {name:"Lucas Oliveira"},
+    {name:"Oliver Müller"},
+    {name:"Mohammed Khan"},
+    {name:"Aria Wang"},
+    {name:"Ayaan Patel"},
+    {name:"Sophia Rossi"},
+    {name:"Noah Johnson"},
+    {name:"Mateo García"}
+]
+
+export const technologies = [
+    {
+        id: 'react-option',
+        icon: <ReactIcon className="text-sky-500" />,
+        title: 'React Js',
+        description: 'A JavaScript library for building user interfaces.'
+    },
+    {
+        id: 'vue-option',
+        icon: <VueJsIcon className="text-green-400" />,
+        title: 'Vue.js',
+        description: 'Vue.js is a model–view front end JavaScript framework.'
+    },
+    {
+        id: 'angular-option',
+        icon: <AngularIcon className="text-red-600" />,
+        title: 'Angular',
+        description: 'A TypeScript-based web application framework.'
+    }
+]
   
