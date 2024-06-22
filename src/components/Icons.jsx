@@ -384,3 +384,15 @@ export const AngularIcon = ({ className, ...rest }) => (
     />
   </svg>
 );
+
+export const MenuIcon = ({ className, ...rest }) => (
+  <svg 
+    viewBox="0 0 17 14" 
+    fill="currentColor" 
+    xmlns="http://www.w3.org/2000/svg"
+    {...rest}
+    className={`w-5 h-5 ${className}`}
+  >
+    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+  </svg>
+);

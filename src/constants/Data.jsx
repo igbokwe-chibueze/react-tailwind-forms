@@ -65,4 +65,11 @@ export const technologies = [
         description: 'A TypeScript-based web application framework.'
     }
 ]
+
+export const navLinks = [
+    { href: "/", label: "Home"},
+    { href: "forms", label: "Forms"},
+    { href: "headings", label: "Headings"},
+    { href: "jumbotron", label: "Jumbotron"},
+  ];
   

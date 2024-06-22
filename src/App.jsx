@@ -1,19 +1,20 @@
-//import FloatingLabelsForm from "./components/FloatingLabelsForm";
-//import GeneralInputs from "./components/GeneralInputs";
-import { Checkbox, FieldInputs, Forms, NumberInputs, SelectInputs, TextArea } from "./pages";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { FormsPage, HeadingsPage, JumbotronPage, LandingPage } from "./pages";
 
 export default function App() {
   return (
-    <>
-      <div>
-        <FieldInputs/>
-        <SelectInputs/>
-        <NumberInputs/>
-        <TextArea/>
-        <Checkbox/>
-        <Forms/>
-        {/* <FloatingLabelsForm/> */}
-      </div>
-    </>
+
+    <main className="font-baseFont">
+      <Router>
+        <Navbar/>
+        <Routes key={location.pathname} location={location}>
+          <Route path='/' element={<LandingPage/>} />
+          <Route path='/forms' element={<FormsPage/>} />
+          <Route path='/headings' element={<HeadingsPage/>} />
+          <Route path='/jumbotron' element={<JumbotronPage/>} />
+        </Routes>
+      </Router>
+    </main>
   )
 }
