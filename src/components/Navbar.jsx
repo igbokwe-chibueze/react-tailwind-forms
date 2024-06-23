@@ -39,12 +39,13 @@ const Navbar = () => {
     }, []);
 
   return (
-    <nav ref={navRef} className=" fixed top-0 right-0 left-0 z-30 bg-gray-100 dark:bg-gray-900 border-gray-200 px-4 lg:px-6 py-2.5 ">
+    <nav ref={navRef} className=" fixed top-0 right-0 left-0 z-30 bg-gray-100 dark:bg-gray-800 px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto">
+
             {/* Logo */}
             <a href="/" className="flex items-center">
                 <img src={creativaLogo} className="h-12 sm:h-16 mr-3" alt="Creativa Logo" />
-                <span className="text-xl font-semibold text-gray-600 self-center whitespace-nowrap">Creativa</span>
+                <span className="text-xl font-semibold text-gray-600 dark:text-gray-100 self-center whitespace-nowrap">Creativa</span>
             </a>
 
             {/* Search and Menu Btn */}

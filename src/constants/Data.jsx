@@ -1,4 +1,4 @@
-import { AngularIcon, ReactIcon, VueJsIcon } from "../components/Icons";
+import { AngularIcon, HomeIcon, ReactIcon, VueJsIcon } from "../components/Icons";
 
 // Data.js
 export const categories = [
@@ -69,7 +69,15 @@ export const technologies = [
 export const navLinks = [
     { href: "/", label: "Home"},
     { href: "forms", label: "Forms"},
-    { href: "headings", label: "Headings"},
-    { href: "jumbotron", label: "Jumbotron"},
+    { href: "topography", label: "Topography"},
+    { href: "components", label: "Components"},
   ];
+
+  export  const breadcrumbs = [
+    { name: 'Home', href: '#', current: false, icon: <HomeIcon/> },
+    { name: 'Projects', href: '#', current: false },
+    { name: 'Flowbite', href: '#', current: true }
+];
+
+//   https://github.com/igbokwe-chibueze
   

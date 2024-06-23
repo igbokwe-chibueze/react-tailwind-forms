@@ -397,21 +397,28 @@ export const MenuIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-// export const SunIcon = ({ className, ...rest }) => (
-//   <svg 
-//     viewBox="0 0 24 24" 
-//     fill="currentColor" 
-//     xmlns="http://www.w3.org/2000/svg"
-//     {...rest}
-//     className={`w-5 h-5 ${className}`}
-//   >
-//     <path 
-//       d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 
-//       0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 
-//       0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 
-//       1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 
-//       12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 
-//       1.591Z" 
-//     />
-//   </svg>
-// );
+export const ArrowRightIcon = ({ className, ...rest }) => (
+  <svg 
+    viewBox="0 0 14 10" 
+    fill="currentColor" 
+    xmlns="http://www.w3.org/2000/svg"
+    {...rest}
+    className={`w-3.5 h-3.5 ${className}`}
+  >
+    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+  </svg>
+);
+
+export const HomeIcon = ({ className, ...rest }) => (
+  <svg 
+    viewBox="0 0 20 20" 
+    fill="currentColor" 
+    xmlns="http://www.w3.org/2000/svg"
+    {...rest}
+    className={`w-3 h-3 ${className}`}
+  >
+    <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 
+      1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"
+    />
+  </svg>
+);
