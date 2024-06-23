@@ -39,19 +39,21 @@
     }
 
     .label-floating {
-        @apply absolute left-2 -top-2 text-xs font-medium text-left text-gray-900 dark:text-white 
-        bg-blue-50 transition-all duration-500 ease-in-out
+        @apply absolute left-2 -top-2 rounded px-2 text-xs font-medium text-left text-gray-900 dark:text-white 
+        bg-blue-50 dark:bg-gray-700 transition-all duration-500 ease-in-out
         peer-placeholder-shown:left-2 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base 
-        peer-placeholder-shown:text-gray-400 peer-placeholder-shown:bg-gray-50
-        peer-focus:left-2 peer-focus:-top-2 peer-focus:text-gray-600 peer-focus:text-xs peer-focus:bg-gray-50
+        peer-placeholder-shown:text-gray-400 peer-placeholder-shown:bg-gray-50 dark:peer-placeholder-shown:bg-gray-700
+        peer-focus:left-2 peer-focus:-top-2 peer-focus:text-gray-600 dark:peer-focus:text-white peer-focus:text-xs 
+        peer-focus:bg-gray-50 dark:peer-focus:bg-gray-700
     }
 
     .label-floating2 {
-        @apply absolute left-2 -top-2 cursor-text text-xs font-medium text-left text-gray-900 dark:text-white 
-        bg-blue-50 transition-all duration-500 ease-in-out
+        @apply absolute left-2 -top-2 rounded px-2 cursor-text text-xs font-medium text-left text-gray-900 dark:text-white 
+        bg-blue-50 dark:bg-gray-700 transition-all duration-500 ease-in-out
         peer-placeholder-shown:left-10 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base 
-        peer-placeholder-shown:text-gray-400 peer-placeholder-shown:bg-gray-50
-        peer-focus:left-2 peer-focus:-top-2 peer-focus:text-gray-600 peer-focus:text-xs peer-focus:bg-gray-50
+        peer-placeholder-shown:text-gray-400 peer-placeholder-shown:bg-gray-50 dark:peer-placeholder-shown:bg-gray-700
+        peer-focus:left-2 peer-focus:-top-2 peer-focus:text-gray-600 dark:peer-focus:text-white peer-focus:text-xs 
+        peer-focus:bg-gray-50 dark:peer-focus:bg-gray-700
     }
 
     .label-floating-filled {
@@ -59,7 +61,7 @@
         transition-all duration-500 ease-in-out
         peer-placeholder-shown:left-2 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base 
         peer-placeholder-shown:text-gray-400
-        peer-focus:left-2 peer-focus:-top-0 peer-focus:text-gray-600 peer-focus:text-xs
+        peer-focus:left-2 peer-focus:-top-0 peer-focus:text-gray-600 dark:peer-focus:text-white peer-focus:text-xs
     }
 
     .label-checkbox {
@@ -83,7 +85,7 @@
     }
 
     .input-basic-textarea {
-        @apply block w-full p-2.5 text-sm text-gray-900 dark:text-white focus:outline-none 
+        @apply block w-full p-2.5 bg-gray-50 dark:bg-gray-700 text-sm text-gray-900 dark:text-white focus:outline-none 
         dark:placeholder-gray-400 
     }
 
@@ -103,7 +105,7 @@
 
     .input-filled {
         /* consider using rounded-lg as it looks better instead of rounded-t-lg */
-        @apply block w-full p-2.5 bg-gray-200 dark:bg-gray-900 text-sm text-gray-900 dark:text-white
+        @apply block w-full p-2.5 bg-gray-200 dark:bg-gray-700 text-sm text-gray-900 dark:text-white
         rounded-t-lg border-0 border-b-2 border-gray-300 dark:border-gray-600
         focus:ring-blue-500 dark:focus:ring-blue-500 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500   
         dark:placeholder-gray-400
@@ -111,7 +113,7 @@
 
     .input-standard {
         /* consider using rounded-lg as it looks better on the bottom border. */
-        @apply block w-full p-2.5 text-gray-900 dark:text-white
+        @apply block w-full p-2.5 text-gray-900 dark:text-white bg-gray-200 dark:bg-gray-900
         border-b-2 border-gray-300 dark:border-gray-600
         focus:ring-blue-500 dark:focus:ring-blue-500 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500   
         dark:placeholder-gray-400
@@ -134,6 +136,7 @@
     }
 
     .input-checkbox {
+        /* These are the only perimeters you can change on the default check-box, to change more use custom check-box */
         @apply w-4 h-4 cursor-pointer
     }
 

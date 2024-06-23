@@ -107,7 +107,7 @@ const Checkbox = () => {
                     >
                         I agree with the 
                         <a href="https://github.com/igbokwe-chibueze/react-tailwind-forms" 
-                            className="highlighted-text hover:underline"
+                            className="ml-2 highlighted-text hover:underline"
                         >
                             terms and conditions.
                         </a>
@@ -505,8 +505,8 @@ const Checkbox = () => {
                             <input id="hover-checkbox" type="checkbox" value="" 
                                 className=" peer input-checkbox-custom 
                                 before:content[''] before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 
-                                before:-translate-x-2/4 before:rounded-full before:bg-gray-900 before:opacity-0 before:transition-opacity 
-                                checked:before:bg-gray-900 hover:before:opacity-10 "
+                                before:-translate-x-2/4 before:rounded-full before:bg-gray-900 dark:before:bg-gray-600
+                                before:opacity-0 before:transition-opacity hover:before:opacity-10 "
                             />
                             <CheckMarkIcon className={" icon-checkbox-custom "}/>
                         </div>
