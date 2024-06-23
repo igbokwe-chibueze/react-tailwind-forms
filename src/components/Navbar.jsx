@@ -3,6 +3,7 @@ import { creativaLogo } from "../assets"
 import { navLinks } from "../constants/Data"
 import { MenuIcon, SearchIcon } from "./Icons"
 import NavLinks from "./NavLinks"
+import ThemeSwitcher from "./ThemeSwitcher"
 
 const Navbar = () => {
 
@@ -38,7 +39,7 @@ const Navbar = () => {
     }, []);
 
   return (
-    <nav ref={navRef} className=" fixed top-0 right-0 left-0 z-30 bg-gray-50 dark:bg-gray-900 border-gray-200 px-4 lg:px-6 py-2.5 ">
+    <nav ref={navRef} className=" fixed top-0 right-0 left-0 z-30 bg-gray-100 dark:bg-gray-900 border-gray-200 px-4 lg:px-6 py-2.5 ">
         <div className="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto">
             {/* Logo */}
             <a href="/" className="flex items-center">
@@ -47,9 +48,13 @@ const Navbar = () => {
             </a>
 
             {/* Search and Menu Btn */}
-            <div className="flex justify-center items-center md:order-2">
+            <div className="flex justify-center items-center md:order-2 space-x-3">
 
-                {/* Menu Toggles */}
+                <div >
+                    <ThemeSwitcher/>
+                </div>
+
+                {/* Menu Toggles --Mobile Only */}
                 <div className=" flex md:hidden justify-center items-center ">
 
                     <button type="button" 
@@ -67,7 +72,7 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                {/* Search */}
+                {/* Search --Large Screen */}
                 <form action="" method="post" className=" hidden md:block w-full">
 
                     <label htmlFor="nav-input" className="sr-only">Search</label>
@@ -108,7 +113,6 @@ const Navbar = () => {
                 <div className=" px-2 md:px-0 ">
                     <NavLinks data={navLinks} toggleNavLinks={toggleNavLinks}/>
                 </div>
-
             </div>
         </div>
 
