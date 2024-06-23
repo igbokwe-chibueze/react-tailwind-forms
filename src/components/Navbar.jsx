@@ -45,7 +45,7 @@ const Navbar = () => {
             {/* Logo */}
             <a href="/" className="flex items-center">
                 <img src={creativaLogo} className="h-12 sm:h-16 mr-3" alt="Creativa Logo" />
-                <span className="text-xl font-semibold text-gray-600 dark:text-gray-100 self-center whitespace-nowrap">Creativa</span>
+                <span className="text-xl font-semibold text-gray-600 dark:text-gray-100 self-center whitespace-nowrap">Creativa Forms</span>
             </a>
 
             {/* Search and Menu Btn */}
