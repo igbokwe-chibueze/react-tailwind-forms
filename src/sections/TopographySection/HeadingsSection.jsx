@@ -122,7 +122,8 @@ const HeadingsSection = () => {
                 >
                     <h1 className=" header-one ">Heading mark </h1>
                     <h2 className=" header-two ">
-                        This example can be used to mark one part of the heading text with a solid background for highlighting.
+                        The <span className="highlighted-text">&quot; mark &quot; </span> 
+                        tag can be used to mark one part of the heading text with a solid background for highlighting.
                     </h2>
                 </div>
 
@@ -142,7 +143,7 @@ const HeadingsSection = () => {
 
 
 
-            {/* Heading mark  */}
+            {/* Heading gradient  */}
             <div 
                 className=" max-w-screen-xl mx-auto rounded-xl border-2 border-gray-200 "
             >
@@ -327,19 +328,19 @@ const HeadingsSection = () => {
                 >
                     <h1 className=" header-one ">Secondary text</h1>
                     <h2 className=" header-two ">
-                        This example can be used to add a secondary text inside the main heading component.
+                        The <span className="highlighted-text">&quot; small &quot;</span> tag can be used to add a secondary text inside the main heading component.
                     </h2>
                 </div>
 
                 <div className=" w-full px-4 lg:px-12 py-4 lg:py-8 ">
 
                     <h1 
-                        className=" flex items-center heading-one "
+                        className=" heading-one "
                     >
                         Creativa 
-                        <span className="ml-2 font-semibold text-gray-500 dark:text-gray-400 ">
+                        <small className="ml-2 font-semibold text-gray-500 dark:text-gray-400 ">
                             This is secondary text
-                        </span>
+                        </small>
                     </h1>
 
                     <p className="paragraph">
