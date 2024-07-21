@@ -1,3 +1,4 @@
+import { asianman, asianwoman, blackman, indianman, indianwoman, nigerianwoman, nigerianwoman2, somalianman, whiteman, whitewoman } from "../assets/photos";
 import { AngularIcon, HomeIcon, ReactIcon, VueJsIcon } from "../components/Icons";
 
 // Data.js
@@ -71,13 +72,27 @@ export const navLinks = [
     { href: "forms", label: "Forms"},
     { href: "topography", label: "Topography"},
     { href: "components", label: "Components"},
-  ];
+];
 
-  export  const breadcrumbs = [
+export  const breadcrumbs = [
     { name: 'Home', href: '#', current: false, icon: <HomeIcon/> },
     { name: 'Projects', href: '#', current: false },
     { name: 'Flowbite', href: '#', current: true }
 ];
+
+export const images = [
+    { src: blackman, alt: 'Chinedu Akintoye' },
+    { src: nigerianwoman, alt: 'Amina Chizoba' },
+    { src: nigerianwoman2, alt: 'Folake Nnenna' },
+    { src: somalianman, alt: 'Abdirahman Warsame' },
+    { src: indianman, alt: 'Aarav Dhillon' },
+    { src: indianwoman, alt: 'Ananya Bhasin' },
+    { src: asianman, alt: 'Daiki Nakamura' },
+    { src: asianwoman, alt: 'Lian Xiuying' },
+    { src: whiteman, alt: 'Liam O\'Connor' },
+    { src: whitewoman, alt: 'Eva Müller' },
+]
+
 
 //   https://github.com/igbokwe-chibueze
   

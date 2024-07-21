@@ -1,7 +1,10 @@
+import { GallerySection } from "../sections/ComponentsSection"
 
 const ComponentsPage = () => {
   return (
-    <div className="flex justify-center items-center h-screen">ComponentsPage</div>
+    <section className="mt-10">
+      <GallerySection/>
+    </section>
   )
 }
 
